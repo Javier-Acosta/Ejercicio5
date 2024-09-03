@@ -1,8 +1,11 @@
+// EN ESTE SWITCH VERIFICA SI EL MES DEL AÑO INGRESADO ES VÁLIDO
+
+
 const fnValidarMes = (texto) =>
 
     {
         let elMesEsValido = false;
-        switch (elMesEsValido) {
+        switch (texto) {
             case "ENERO":
                 {
                     elMesEsValido = true;
@@ -18,9 +21,54 @@ const fnValidarMes = (texto) =>
                     elMesEsValido = true;
                     break;
                 }
-            default:
+            case "ABRIL":
                 {
                     elMesEsValido = true;
+                    break;
+                }
+            case "MAYO":
+                {
+                    elMesEsValido = true;
+                    break;
+                }
+            case "JUNIO":
+                {
+                    elMesEsValido = true;
+                    break;
+                }
+            case "JULIO":
+                {
+                    elMesEsValido = true;
+                    break;
+                }
+            case "AGOSTO":
+                {
+                    elMesEsValido = true;
+                    break;
+                }
+            case "SEPTIEMBRE":
+                {
+                    elMesEsValido = true;
+                    break;
+                }
+            case "OCTUBRE":
+                {
+                    elMesEsValido = true;
+                    break;
+                }
+            case "NOVIEMBRE":
+                {
+                    elMesEsValido = true;
+                    break;
+                }
+            case "DICIEMBRE":
+                {
+                    elMesEsValido = true;
+                    break;
+                }
+            default:
+                {
+                    elMesEsValido = false;
                     break;
                 }
 
@@ -28,19 +76,38 @@ const fnValidarMes = (texto) =>
 
         }
 
-
+        return elMesEsValido;
     }
 window.addEventListener("load", () => {
-    console.log("esto esta funcionando");
-    let textoDelMes = "marzo";
-    let resultado = fnValidarMes(textoDelMes.toLocaleUpperCase)
 
-    if (resultado) {
-        console.log("el mes corresponde a un mes del calenmdario");
+    console.log("esto esta funcionando");
+    const idMes = document.querySelector("#idMes");
+    // const idMes2 = document.querySelector("#idMes2");
+    // const idMes3 = document.querySelector("#idMes3");
+//   console.log(idMes1);
+
+    idBtnValidarMes.addEventListener("click",()=>{
+        console.log(idBtnValidarMes);
+        
+        console.log(idMes.value);
+        
+
+        // convertir a numero
+        // let idMes1 = Number (idMes1.value);
+    })
+
+    let textoDelMes = idMes.value;
+    // let resultado = fnValidarMes(textoDelMes.toLocaleUpperCase())
+    
+
+    if (textoDelMes) {
+        
+        console.log(`el mes corresponde a un mes del calenmdario ${textoDelMes}`);
+        
 
     } else {
-        console.log("el mes ungresado NO corresponde a  un mes del calendario");
+        console.log(`el mes corresponde a un mes del calenmdario ${textoDelMes}`);
 
     }
-
+    
 })
