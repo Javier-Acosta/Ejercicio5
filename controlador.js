@@ -81,33 +81,50 @@ const fnValidarMes = (texto) =>
 window.addEventListener("load", () => {
 
     console.log("esto esta funcionando");
-    const idMes = document.querySelector("#idMes");
-    // const idMes2 = document.querySelector("#idMes2");
-    // const idMes3 = document.querySelector("#idMes3");
-//   console.log(idMes1);
 
-    idBtnValidarMes.addEventListener("click",()=>{
-        console.log(idBtnValidarMes);
-        
-        console.log(idMes.value);
-        
 
-        // convertir a numero
-        // let idMes1 = Number (idMes1.value);
+    // const idMes = document.querySelector("#idMes");
+    // console.log(resultado);
+
+    const idResultadoMes = document.querySelector("#idResultadoMes");
+    const idResultado = document.querySelector("#idResultado");
+
+    // console.log(idResultadoMes);
+    // console.log(idResultado);
+
+    idBtnValidarMes.addEventListener("click", () => {
+        const mes = document.querySelector("#idMes");
+
+        const resultado = fnValidarMes(mes.value.toLocaleUpperCase());
+        // console.log(idBtnValidarMes);
+        // console.log(idResultadoMes);
+
+
+
+
+
+        const mess = resultado;
+        console.log(mess);
+
+
+
+
+        if (resultado) {
+
+            idResultadoMes.textContent = `El dato ingresado ${idMes.value} corresponde a un nombre del mes válido`;
+
+
+        } else {
+            idResultadoMes.textContent = `El dato ingresado ${idMes.value}  NO  corresponde a un nombre del mes válido`;
+
+
+        }
     })
 
-    let textoDelMes = idMes.value;
-    // let resultado = fnValidarMes(textoDelMes.toLocaleUpperCase())
-    
 
-    if (textoDelMes) {
-        
-        console.log(`el mes corresponde a un mes del calenmdario ${textoDelMes}`);
-        
 
-    } else {
-        console.log(`el mes corresponde a un mes del calenmdario ${textoDelMes}`);
 
-    }
-    
+
+
+
 })
